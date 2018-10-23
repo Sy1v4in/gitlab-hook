@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -e
+
+export COMPOSE_PROJECT_NAME="gitlab-hook"
+
+build() {
+    docker-compose build
+}
+
+start() {
+    docker-compose up -d
+}
+
+stop() {
+    docker-compose down
+}
+
+restart() {
+    stop
+    start
+}
+
+build
+[ "$1" != "--dry-run" ] && restart || exit 0

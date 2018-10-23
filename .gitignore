@@ -1,0 +1,17 @@
+### Node ###
+# Logs
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional npm cache directory
+.npm
+
+# Dependency directories
+node_modules
+
+
+### IntelliJ ###
+.idea
+*.iml

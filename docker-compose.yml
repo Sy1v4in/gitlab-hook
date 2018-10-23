@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  gitlab-hook:
+    build: .
+    image: gitlab-hook
+    container_name: gitlab-hook
+    ports:
+      - 8182:8182
+    volumes:
+      - /var/log/gitlab-hook:/var/log/gitlab-hook
+    restart: always
